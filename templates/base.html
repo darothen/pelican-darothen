@@ -105,7 +105,7 @@
 
 </head>
 <body>
-
+{% block navbar %}
 <div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} navbar-fixed-top" role="navigation">
 	<div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
         <div class="navbar-header">
@@ -117,10 +117,12 @@
                 <span class="icon-bar"></span>
             </button>
             {% endif %}
-            <a href="{{ SITEURL }}/" class="navbar-brand">
-                {% if SITELOGO %}<img src="{{ SITEURL }}/{{ SITELOGO }}" width="{{ SITELOGO_SIZE }}"/> {% endif %}
-                {% if not HIDE_SITENAME %}{{ SITENAME }}{% endif %}
-            </a>
+            <div id="brand">
+               <a href="{{ SITEURL }}/" class="navbar-brand">
+                   {% if SITELOGO %}<img src="{{ SITEURL }}/{{ SITELOGO }}" width="{{ SITELOGO_SIZE }}"/> {% endif %}
+                   {% if not HIDE_SITENAME %}{{ SITENAME }}{% endif %}
+               </a>
+            </div>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
@@ -130,14 +132,14 @@
                 {% if DISPLAY_PAGES_ON_MENU %}
                     {% for p in PAGES %}
                          <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
-                             {{ p.menulabel|default(p.title) }}
+                             ./{{ p.menulabel|default(p.title)|lower }}
                           </a></li>
                       {% endfor %}
                 {% endif %}
                 {% if DISPLAY_CATEGORIES_ON_MENU %}
                     {% for cat, null in categories %}
                         <li {% if cat == category %}class="active"{% endif %}>
-                            <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat | capitalize }}</a>
+                            <a href="{{ SITEURL }}/{{ cat.url }}">./{{ cat }}</a>
                         </li>
                     {% endfor %}
                 {% endif %}
@@ -158,6 +160,7 @@
         <!-- /.navbar-collapse -->
     </div>
 </div> <!-- /.navbar -->
+{% endblock %}
 <!-- Banner -->
 {% if BANNER and BANNER_ALL_PAGES %}
     {% include 'includes/banner.html' %}

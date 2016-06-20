@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block navbar %}{% endblock %}
+
+{% block banner %}
+<!-- Banner
+  ----------->
+
+<style>
+	#banner {
+	    background-image:url("{{ SITEURL}}/{{ BANNER }}");
+       height: 250px;
+       padding-top: 0;
+   }
+</style>
+
+<div id="banner">
+	<div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
+		<div class="copy banner-title">
+			<h1>{{ SITENAME|lower }}</h1>
+			{% if BANNER_SUBTITLE %}
+				<p class="intro">{{ BANNER_SUBTITLE }}</p>
+			{% endif %}
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- Page Links
+  --------------->
+<div class="container">
+   <div class="row">
+      {% for p in PAGES %}
+      {% if (not (loop.index-1) % 3) and (loop.index > PAGES|length - 3) %}
+      <div class="col-md-4 col-md-offset-2">
+      {% else %}
+      <div class="col-md-4">
+      {% endif %}
+         <h3><i class="fa {{ p.icon }}" aria-hidden="true"></i> ./{{ p.title|lower }} </h3>
+         <p>{{ p.summary }}</p>
+         <p>{{ p.description }}</p>
+      </div>
+      {% endfor %}
+      <div class="col-md-4 ">
+         <h3><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ./blog</h3>
+         <p>Collected musings on science, programming, technology, and policy</p>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+page.content

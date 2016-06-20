@@ -6,7 +6,19 @@
                 <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
                 {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
                     <div class="well well-sm">
-                        {% include "includes/article_info.html" %}
+                       <div class="post-tags">
+                       {% if article.tags %}
+                       <span class="label label-default">Tags</span>
+                       {% for tag in article.tags %}
+                          <a href="{{ SITEURL }}/tag/{{ tag }}.html" class="text-primary">{{ tag }}</a>
+                          {% if not loop.last %}
+                          <span class="separator">•</span>
+                          {% endif %}
+                       {% endfor %}
+                       {% endif %}
+                       </div>
+                       <div class="list-date"
+                       <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
                     </div>
                 {% endif %}
                 <div class="summary">{{ article.summary }}

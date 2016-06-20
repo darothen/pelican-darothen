@@ -1,5 +1,23 @@
+html,
 body {
    font-family: "Open Sans", sans-serif;
+   padding-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.banner-title {
+   vertical-align: middle;
+   height: 100%;
+   display: table-cell;
+}
+
+h1 #title {
+   font-weight: bold;
+   margin: none;
+   text-transform: none;
 }
 
 .post-meta a {
@@ -12,6 +30,17 @@ body {
 
 .footer {
    font-size: small;
+   background: white;
+   border-top-color: black;
+   border-top-style: solid;
+   border-top-width: 1px;
+   bottom: 0;
+   margin-bottom: 0;
+   margin-top: 5px;
+   padding: 0.5% 1% 1.5%;
+   position: relative;
+   text-align: center;
+   width: 100%;
 }
 
 .footer a {
