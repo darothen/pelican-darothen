@@ -1,0 +1,18 @@
+<div class="post-meta">
+
+   <span class="published">
+      <time datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }}</time>
+   </span>
+
+   <div class="post-tags">
+   {% if article.tags %}
+   <span class="label label-default">Tags</span>
+   {% for tag in article.tags %}
+      <a href="{{ SITEURL }}/tag/{{ tag }}.html">{{ tag }}</a>
+      {% if not loop.last %}
+      <span class="separator">•</span>
+      {% endif %}
+   {% endfor %}
+   {% endif %}
+   </div>
+</div>
