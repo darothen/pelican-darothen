@@ -9,15 +9,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .banner-title {
-   vertical-align: middle;
+   padding: 20px;
    height: 100%;
+   margin: none;
    display: table-cell;
+   vertical-align: middle;
+   font-weight: bold;
+   text-transform: lowercase;;
 }
 
 h1 #title {
-   font-weight: bold;
-   margin: none;
-   text-transform: none;
+}
+
+img.headshot{
+  object-fit: cover;
+  border: 5px solid #000000;
+  max-width: 100%;
+  max-height: auto;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
 }
 
 .post-meta a {
