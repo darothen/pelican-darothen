@@ -8,29 +8,36 @@ h1, h2, h3, h4, h5, h6 {
    font-family: 'Source Sans Pro', sans-serif;
 }
 
-.banner-title {
-   padding: 20px;
-   height: 100%;
-   margin: none;
-   display: table-cell;
-   vertical-align: middle;
-   font-weight: bold;
-   text-transform: lowercase;;
-}
-
-h1 #title {
+#banner h1 {
+    color: #fff;
+    font-family: inherit;
+    font-size: 60px;
+    font-stretch: condensed;
+    font-weight: 700;
+    line-height: 0.9;
+    margin: 0;
+    text-transform: lowercase;
 }
 
 img.headshot{
-  object-fit: cover;
-  border: 5px solid #000000;
-  max-width: 100%;
-  max-height: auto;
+   object-fit: cover;
+   border: 5px solid #000000;
+   max-width: 80%;
+   max-height: auto;
+}
+
+.social-media {
+   text-align: center;
+   font-size: 50px;
+}
+
+.social-media > li > a:hover {
+   text-color: blue;
 }
 
 .vertical-align {
-  display: flex;
-  align-items: center;
+   display: flex;
+   align-items: center;
 }
 
 .post-meta a {
@@ -42,8 +49,8 @@ img.headshot{
 }
 
 .footer-spacer {
-   height: 40px;
-   padding-bottom: 40px;
+   height: 50px;
+   padding-bottom: 60px;
 }
 
 .footer {
@@ -53,12 +60,11 @@ img.headshot{
    border-top-style: solid;
    border-top-width: 1px;
    bottom: 0;
-   height: 40px;
+   height: 50px;
    margin-bottom: 0;
    margin-top: 5px;
    padding: 0.5% 1% 1.5% 1%;
    position: fixed;
-   text-align: center;
    vertical-align: middle;
    width: 100%;
 }
@@ -66,4 +72,24 @@ img.headshot{
 .footer a {
    text-decoration: none;
    border-bottom: 1px dotted;
+}
+
+.footer p {
+   margin-bottom: 0;
+}
+
+.footer ul {
+   margin-bottom: 0;
+}
+
+.footer-left {
+   text-align: left;
+}
+
+.footer-center {
+   text-align: center;
+}
+
+.footer-right {
+   text-align: right;
 }
