@@ -27,12 +27,8 @@ img.headshot{
 }
 
 .social-media {
-   text-align: center;
-   font-size: 50px;
-}
-
-.social-media > li > a:hover {
-   text-color: blue;
+   text-align: center !important;
+   font-size: 50px !important;
 }
 
 .page-subheading {
@@ -106,10 +102,18 @@ img.headshot{
    text-align: left;
 }
 
+.footer-left ul {
+   display: inline-block;
+}
+
 .footer-center {
    text-align: center;
 }
 
 .footer-right {
    text-align: right;
+}
+
+.social-media-iconlist li a:hover {
+   color: blue;
 }
