@@ -35,6 +35,26 @@ img.headshot{
    text-color: blue;
 }
 
+.page-subheading {
+   font-family: "Open Sans", sans-serif;
+   font-size: 22px;
+}
+
+.page-block-separator {
+   margin-top: 20px;
+   margin-bottom: 0;
+}
+
+.page-block-fig {
+   margin-top: 40px;
+}
+
+.page-block-summary > h3 {
+   text-align: center;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
 .vertical-align {
    display: flex;
    align-items: center;
