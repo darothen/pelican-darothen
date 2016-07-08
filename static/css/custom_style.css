@@ -1,3 +1,7 @@
+/*
+ Main page elements and styling
+*/
+
 html,
 body {
    font-family: "Open Sans", sans-serif;
@@ -31,6 +35,10 @@ img.headshot{
    font-size: 50px !important;
 }
 
+/*
+ Static page styling
+*/
+
 .page-subheading {
    font-family: "Open Sans", sans-serif;
    font-size: 22px;
@@ -63,6 +71,35 @@ img.headshot{
 .post-meta .published time {
    font-weight:  bold;
 }
+
+.publication-list {
+   list-style: none;
+   margin-left: 0;
+   padding-left: 1em;
+   font-size: small;
+}
+
+.publication-list > li {
+   padding-bottom: 0.5em;
+   text-indent: -1em;
+}
+
+.publication-list > li:before {
+   content: " - ";
+}
+
+.inline-figure {
+   margin-bottom: 10px;
+}
+
+.inline-figure > figcaption {
+   font-style: italic;
+   text-align: right;
+}
+
+/*
+ Footer
+*/
 
 .footer-spacer {
    height: 50px;
