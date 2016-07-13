@@ -97,6 +97,29 @@ img.headshot{
    text-align: right;
 }
 
+.cv-section > h3 {
+   font-size: 24px;
+   margin-bottom: 20px;
+}
+
+.cv-section > h4 {
+   font-family: "Open Sans", sans-serif;
+   font-size: 20px;
+}
+
+.cv-section p {
+   margin-bottom: 0;
+}
+
+.teaching-list .panel-heading {
+   font-size: 16px;
+   font-weight: bold;
+}
+
+.media {
+   margin-bottom: 20px;
+}
+
 /*
  Footer
 */
