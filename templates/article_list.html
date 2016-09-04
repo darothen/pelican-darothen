@@ -7,8 +7,11 @@
                 {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
                     <div class="well well-sm">
                        <div class="post-tags">
+                       <span style="font-weight: bold;">
+                         <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}
+                         </time> &emsp;
+                        </span>
                        {% if article.tags %}
-                       <span class="label label-default">Tags</span>
                        {% for tag in article.tags %}
                           <a href="{{ SITEURL }}/tag/{{ tag }}.html" class="text-primary">{{ tag }}</a>
                           {% if not loop.last %}
@@ -17,9 +20,6 @@
                        {% endfor %}
                        {% endif %}
                        </div>
-                       <div class="list-date"
-                       <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
-                    </div>
                 {% endif %}
                 <div class="summary">{{ article.summary }}
                     {% include 'includes/comment_count.html' %}
