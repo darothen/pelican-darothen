@@ -2,6 +2,12 @@
 {% if USE_OPEN_GRAPH is not defined %}
     {% set USE_OPEN_GRAPH = True %}
 {% endif %}
+
+<!-- Extra header inserts, e.g. for liquid_tags -->
+{% if EXTRA_HEADER %}
+{{ EXTRA_HEADER }}
+{% endif %}
+
 <html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock %}"{% if USE_OPEN_GRAPH %} prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml"{% endif %}>
 <head>
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
