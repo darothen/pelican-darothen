@@ -34,7 +34,7 @@
 <section class="page-links">
 	<div class="container">
 	   <div class="row">
-	      {% for p in PAGES %}
+	      {% for p in pages %}
 	      <div class="col-md-4 col-lg-3">
 	         <h3><a href="{{ SITEURL }}/{{ p.url }}"><i class="fa {{ p.icon }}" aria-hidden="true"></i> {{ p.title|lower }}</a></h3>
 	         <p>{{ p.summary }}</p>
